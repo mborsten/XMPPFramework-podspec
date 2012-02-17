@@ -1,9 +1,3 @@
-#
-# Be sure to run `pod spec lint XMPPFramework.podspec' to ensure this is a
-# valid spec.
-#
-# Remove all comments before submitting the spec.
-#
 Pod::Spec.new do |s|
   s.name     = 'XMPPFramework'
   s.version  = '3.3'
@@ -19,21 +13,7 @@ Pod::Spec.new do |s|
   s.library      = 'xml2'
   s.requires_arc = true
   s.xcconfig     = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
-  
-  s.subspec 'KissXML' do |kiss|
-    kiss.homepage = 'https://github.com/robbiehanson/KissXML'
-    kiss.summary = 'KissXML provides a drop-in replacement for Apples NSXML class culster in environments without NSXML (e.g. iOS).'
-    s.source        = { :git => 'https://github.com/robbiehanson/KissXML.git', :tag => '5.0'}
-    kiss.source_files = '{KissXML, KissXML/**/*}/*.{h,m}'
-    kiss.xcconfig     = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
-    kiss.library      = 'xml2'
-  end
-  
   s.dependency 'CocoaLumberjack'
   s.dependency 'CocoaAsyncSocket'
-  
-
-  # Finally, specify any Pods that this Pod depends on.
-  #
-  # s.dependency 'JSONKit', '~> 1.4'
+  s.dependency 'KissXML', :podspec => 'https://raw.github.com/mborsten/KissXML-podspec/master/5.5/KissXML.podspec'
 end
