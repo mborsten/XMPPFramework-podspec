@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.subspec 'KissXML' do |kiss|
     kiss.homepage = ''
     kiss.summary = ''
-    kiss.source_file = '{KissXML, KissXML/**/*}/*.{h,m}'
+    kiss.source_files = '{KissXML, KissXML/**/*}/*.{h,m}'
     kiss.xcconfig     = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
     kiss.library      = 'xml2'
   end
