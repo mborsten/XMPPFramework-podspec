@@ -21,8 +21,9 @@ Pod::Spec.new do |s|
   s.xcconfig     = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
   
   s.subspec 'KissXML' do |kiss|
-    kiss.homepage = ''
-    kiss.summary = ''
+    kiss.homepage = 'https://github.com/robbiehanson/KissXML'
+    kiss.summary = 'KissXML provides a drop-in replacement for Apples NSXML class culster in environments without NSXML (e.g. iOS).'
+    s.source        = { :git => 'https://github.com/robbiehanson/KissXML.git', :tag => '5.0'}
     kiss.source_files = '{KissXML, KissXML/**/*}/*.{h,m}'
     kiss.xcconfig     = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
     kiss.library      = 'xml2'
@@ -30,7 +31,6 @@ Pod::Spec.new do |s|
   
   s.dependency 'CocoaLumberjack'
   s.dependency 'CocoaAsyncSocket'
-  s.dependency 'XMPPFramework/KissXML'
   
 
   # Finally, specify any Pods that this Pod depends on.
