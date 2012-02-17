@@ -10,9 +10,9 @@ Pod::Spec.new do |s|
   s.source_files  = 'Categories/*.{h,m}', 'Core/*.{h,m}', 'Extensions/**/*.{h,m}', 'Utilities/*.{h,m}', 'Vendor/libidn/*.{h,m,a}'
   s.clean_paths   = 'Xcode', 'Vendor/libidn/libidn-1.15.tar.gz', 'Vendor/KissXML', 'Vendor/CocoaLumberjack', 'Vendor/CocoaAsyncSocket'
   s.frameworks  = 'CFNetwork', 'SystemConfiguration', 'CoreData', 'CoreLocation'
-  s.library      = 'xml2', 'libdn', 'libresolv'
+  s.library      = 'xml2', 'libresolv', 'libdn'
   s.requires_arc = true
-  s.xcconfig     = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+  s.xcconfig     = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2', 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/XMPPFramework/Vendor/libdn"' }
   s.dependency 'CocoaLumberjack'
   s.dependency 'CocoaAsyncSocket'
   s.dependency 'KissXML', :podspec => 'https://raw.github.com/mborsten/KissXML-podspec/master/5.5/KissXML.podspec'
