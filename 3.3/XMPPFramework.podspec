@@ -9,8 +9,8 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.source_files  = 'Categories/*.{h,m}', 'Core/*.{h,m}', 'Extensions/**/*.{h,m}', 'Utilities/*.{h,m}', 'Vendor/libidn/*.{h,m,a}'
   s.clean_paths   = 'Xcode', 'Vendor/libidn/libidn-1.15.tar.gz', 'Vendor/KissXML', 'Vendor/CocoaLumberjack', 'Vendor/CocoaAsyncSocket'
-  s.frameworks  = 'CFNetwork', 'SystemConfiguration', 'CoreData', 'CoreLocation'
-  s.library      = 'xml2', 'libresolv', 'libdn'
+  s.frameworks  = 'CFNetwork', 'SystemConfiguration', 'CoreData', 'CoreLocation', 'libresolv'
+  s.library      = 'xml2', 'libdn'
   s.requires_arc = true
   s.xcconfig     = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2', 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/XMPPFramework/Vendor/libdn"' }
   s.dependency 'CocoaLumberjack'
