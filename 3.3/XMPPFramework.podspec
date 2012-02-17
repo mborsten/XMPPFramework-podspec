@@ -14,9 +14,7 @@ Pod::Spec.new do |s|
   s.source        = { :git => 'git://github.com/robbiehanson/XMPPFramework.git', :tag => '3.3'}
   s.platform = :ios
   s.source_files  = '{Categories, Core, Extensions/**/*, Utilities, Vendor/libidn/*}/*.{h,m}'
-  s.clean_paths   = 'Xcode', 'Vendor/libidn/libidn-1.15.tar.gz'
-  s.dependency 'CocoaLumberjack'
-  s.dependency 'CocoaAsyncSocket'
+  s.clean_paths   = 'Xcode', 'Vendor/libidn/libidn-1.15.tar.gz', 'Vendor/KissXML'
   s.frameworks  = 'CFNetwork', 'SystemConfiguration'
   s.library      = 'xml2'
   s.requires_arc = true
@@ -29,6 +27,11 @@ Pod::Spec.new do |s|
     kiss.xcconfig     = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
     kiss.library      = 'xml2'
   end
+  
+  s.dependency 'CocoaLumberjack'
+  s.dependency 'CocoaAsyncSocket'
+  s.dependency 'XMPPFramework/KissXML'
+  
 
   # Finally, specify any Pods that this Pod depends on.
   #
