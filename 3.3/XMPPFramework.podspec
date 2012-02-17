@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author        = {'Robbie Hanson' => 'http://deusty.blogspot.com/'}
   s.source        = { :git => 'git://github.com/robbiehanson/XMPPFramework.git', :tag => '3.3'}
   s.platform = :ios
-  s.source_files  = 'Categories/*.{h, m}', 'Core/*.{h, m}', 'Extensions/**/*.{h, m}', 'Utilities/*.{h, m}', 'Vendor/libidn/*.{h, m}'
+  s.source_files  = 'Categories/*.{h,m}', 'Core/*.{h,m}', 'Extensions/**/*.{h,m}', 'Utilities/*.{h,m}', 'Vendor/libidn/*.{h,m}'
   s.clean_paths   = 'Xcode', 'Vendor/libidn/libidn-1.15.tar.gz', 'Vendor/KissXML', 'Vendor/CocoaLumberjack', 'Vendor/CocoaAsyncSocket'
   s.frameworks  = 'CFNetwork', 'SystemConfiguration'
   s.library      = 'xml2'
